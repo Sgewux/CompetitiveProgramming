@@ -4,18 +4,15 @@ const int N = 1e6;
 std::vector<int> adj[N];
 bool visited[N] = {false};
 
-long long dfs(int node){
+void dfs(int node){
     if(visited[node]){
-        return 0;
+        return;
     } else {
         visited[node] = true;
-        long long vis = 1;
 
         for(auto& n : adj[node]){
-            vis += dfs(n);
+            dfs(n);
         }
-
-        return vis;
     }
 }
 
@@ -23,7 +20,6 @@ void solve(){
     long long n;
     long long m;
     long long cantOfFloors = 0;
-    long long cantOfVisited = 0;
     long long ans = 0;
     std::string curr;
     std::vector<std::string>b;
@@ -70,13 +66,9 @@ void solve(){
 
     for(long long i = 0; i<n; i++){
         for(long long j = 0; j<m; j++){
-            if(cantOfVisited == cantOfFloors){
-                break;
-            }
-
             if(b[i][j] == '.'){
                 if(!visited[m*i + j]){
-                    cantOfVisited += dfs(m*i + j);
+                    dfs(m*i + j);
                     ans++;
                 }
             }

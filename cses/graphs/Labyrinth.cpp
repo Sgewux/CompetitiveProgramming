@@ -50,7 +50,7 @@ std::string buildPath(int node, int m){
             }
         }
     }
-
+    std::reverse(path.begin(), path.end());
     return path;
 }
 
@@ -114,9 +114,7 @@ void solve(){
         std::string p = buildPath(B, m);
         std::cout<<"YES"<<'\n';
         std::cout<<distance[B]<< '\n';
-        for(long long i = p.length() - 1; i >= 0; i--){
-            std::cout<<p[i];
-        }
+        std::cout<<p;
     } else {
         std::cout<<"NO";
     }
