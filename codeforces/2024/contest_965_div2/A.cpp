@@ -4,7 +4,21 @@
 using namespace std;
 
 void solve(){
- 
+    ll x;
+    ll y;
+    ll k;
+    cin>>x>>y>>k;
+
+    if(k == 1){
+        cout<<x << ' ' <<y <<'\n';
+        return;
+    }
+
+    for(long long i = 1; i<=k-1; i++){
+        cout<<x+i<<' '<<y+i<<'\n';
+    }
+
+    cout<<x - (k*(k-1)/2) <<' ' << y - (k*(k-1)/2)<<'\n';
 }
 
 int main(){

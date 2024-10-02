@@ -4,7 +4,11 @@
 using namespace std;
 
 void solve(){
- 
+    ll n; ll x; ll y;
+    cin>>n>>x>>y;
+
+    x = min(x,y);
+    cout<<(n/x + (n%x ? 1 : 0))<<'\n';
 }
 
 int main(){

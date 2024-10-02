@@ -1,10 +1,13 @@
 #include <bits/stdc++.h>
-#define ll long long
-
-using namespace std;
 
 void solve(){
- 
+    long long n;
+    std::cin>>n;
+    long long ans = std::floor(n/4) + (n%4)/2;
+
+    std::cout<<ans<<'\n';
+    
+    
 }
 
 int main(){

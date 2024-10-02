@@ -4,7 +4,18 @@
 using namespace std;
 
 void solve(){
- 
+    ll a;
+    ll b;
+    cin>>a>>b;
+
+    ll c = a;
+    ll ans = (c-a) + (b-c);
+    while(c <= b){
+        ans = min(ans, (c-a) + (b-c));
+        c++;
+    }
+
+    cout<<ans<<'\n';
 }
 
 int main(){

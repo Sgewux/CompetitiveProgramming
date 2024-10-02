@@ -4,7 +4,11 @@
 using namespace std;
 
 void solve(){
- 
+    ll n;
+    ll k;
+    cin>>n>>k;
+    
+    cout<<(n/k + 1)*k;
 }
 
 int main(){
@@ -12,8 +16,7 @@ int main(){
     std::cin.tie(0);
     std::cout.tie(0);
 
-    long long t;
-    std::cin>>t;
+    long long t =1;
 
     while(t--){
         solve();

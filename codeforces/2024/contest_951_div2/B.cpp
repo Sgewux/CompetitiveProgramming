@@ -4,7 +4,22 @@
 using namespace std;
 
 void solve(){
- 
+    ll x; ll y;
+    cin>>x>>y;
+    ll z = x ^ y;
+    ll ans = 1;
+
+    if(z & 1){
+        cout<< 1 <<'\n';
+        return;
+    }
+
+    while(!(z & 1)){
+        ans *= 2;
+        z = z>>1;
+    }
+
+    cout<<ans<<'\n';
 }
 
 int main(){

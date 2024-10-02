@@ -4,7 +4,18 @@
 using namespace std;
 
 void solve(){
- 
+    ll n;
+    ll a;
+    ll b;
+    ll p;
+    ll q;
+    cin>>n>>a>>b>>p>>q;
+
+    if(p > q){
+        cout<< p*(n/a) + q*(n/b - n/lcm(a,b));
+    } else {
+        cout<< q*(n/b) + p*(n/a - n/lcm(a,b));
+    }
 }
 
 int main(){
@@ -12,8 +23,7 @@ int main(){
     std::cin.tie(0);
     std::cout.tie(0);
 
-    long long t;
-    std::cin>>t;
+    long long t=1;
 
     while(t--){
         solve();

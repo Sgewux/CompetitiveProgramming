@@ -4,7 +4,13 @@
 using namespace std;
 
 void solve(){
- 
+    ll a; ll b;
+    cin>>a>>b;
+    b %= 2;
+    a -= (2*b);
+
+    cout<<(a>=0 && a%2 == 0 ? "YES" : "NO");
+    cout<<'\n';
 }
 
 int main(){

@@ -4,7 +4,18 @@
 using namespace std;
 
 void solve(){
- 
+    ll l; ll r;
+    cin>>l>>r;
+    ll g = 0;
+    ll i = 1;
+    ll ans = 0;
+    while(l + g <= r){
+        ans++;
+        g += i;
+        i++;
+    }
+
+    cout<<ans<<'\n';
 }
 
 int main(){
